@@ -8,8 +8,13 @@ import { Component } from '@angular/core';
 export class AppComponent {
   entered='';
   newPost = 'No Content';
+  isValid : Boolean = false
 
   addBtn() {
     this.newPost = this.entered;
   }
+  onCreate(){
+    this.isValid = !this.isValid
+  }
+
 }

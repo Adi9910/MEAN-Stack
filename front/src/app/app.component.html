@@ -13,8 +13,8 @@
   </button>
   <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
    <mat-icon>share</mat-icon>
- </button>
-</mat-toolbar>
+  </button>
+  </mat-toolbar>
 </p>
 
 <!-- <textarea rows="7" [value]="newPost" #postInput></textarea>
@@ -23,9 +23,9 @@
 <p>{{ newPost }}</p> -->
 
 
-<!-- <textarea rows="7" [(ngModel)]="entered"></textarea>
+<textarea rows="7" [(ngModel)]="entered"></textarea>
 <button (click)="addBtn()">Save Post</button>
-<p>{{ newPost }}</p> -->
+<p>{{ newPost }}</p>
 
 <form class="example-form">
   <mat-form-field class="example-full-width" appearance="fill">
@@ -38,3 +38,14 @@
     <textarea matInput placeholder="Ex. It makes me feel..."></textarea>
   </mat-form-field>
 </form>
+
+<div class="container">
+  <button class="btn-btn-success" (click)="onCreate()">Create Block</button>
+  <div *ngIf="isValid; then thenBlock else elseBlock"></div>
+  <ng-template #elseBlock>
+    <div>NO BLock</div>
+  </ng-template>
+  <ng-template #thenBlock>
+    <div>block has been created</div>
+  </ng-template>
+</div>
