@@ -5,13 +5,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MatInputModule } from '@angular/material/input';
 import { MatToolbarModule } from '@angular/material/toolbar';
-import {MatIconModule} from '@angular/material/icon';
-
+import { MatIconModule } from '@angular/material/icon';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NewComponent } from './new/new.component';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, NewComponent],
   imports: [
     FormsModule,
     BrowserModule,
@@ -19,7 +19,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     BrowserAnimationsModule,
     MatInputModule,
     MatToolbarModule,
-    MatIconModule
+    MatIconModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
