@@ -1,46 +1,11 @@
-<!-- <p>
-  <mat-toolbar>
-    <span>My Application</span>
-  </mat-toolbar>
-  <mat-toolbar>
-   <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
-    <mat-icon>menu</mat-icon>
-  </button>
-  <span>My App</span>
-  <span class="example-spacer"></span>
-  <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
-    <mat-icon>favorite</mat-icon>
-  </button>
-  <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
-   <mat-icon>share</mat-icon>
-  </button>
-  </mat-toolbar>
-</p>
-
-<textarea rows="7" [(ngModel)]="entered"></textarea>
-<button (click)="addBtn()">Save Post</button>
-<p>{{ newPost }}</p>
-
-<form class="example-form">
-  <mat-form-field class="example-full-width" appearance="fill">
-    <mat-label>Favorite food</mat-label>
-    <input matInput placeholder="Ex. Pizza" value="Sushi">
-  </mat-form-field>
-
-  <mat-form-field class="example-full-width" appearance="fill">
-    <mat-label>Leave a comment</mat-label>
-    <textarea matInput placeholder="Ex. It makes me feel..."></textarea>
-  </mat-form-field>
-</form>
-
-<div class="container">
-  <button class="btn-btn-success" (click)="onCreate()">Create Block</button>
-  <div *ngIf="isValid; then thenBlock else elseBlock"></div>
-  <ng-template #elseBlock>
-    <div>NO BLock</div>
-  </ng-template>
-  <ng-template #thenBlock>
-    <div>block has been created</div>
-  </ng-template>
-</div> -->
-<p>App is working</p>
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    Routing Application
+  </h1>
+</div>
+<nav>
+	<a routerLink="/departments" routerLinkActive="active">Departments</a>
+	<a routerLink="/employees" routerLinkActive="active">Employees</a>
+</nav>
+<router-outlet></router-outlet>
