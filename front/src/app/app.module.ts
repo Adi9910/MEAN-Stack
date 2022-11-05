@@ -6,12 +6,10 @@ import { AppComponent } from './app.component';
 import { MatInputModule } from '@angular/material/input';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
-
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NewComponent } from './new/new.component';
 
 @NgModule({
-  declarations: [AppComponent, NewComponent],
+  declarations: [AppComponent],
   imports: [
     FormsModule,
     BrowserModule,
