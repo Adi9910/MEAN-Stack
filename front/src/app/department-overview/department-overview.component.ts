@@ -9,11 +9,7 @@ import { Component, OnInit } from '@angular/core';
   `,
   styles: []
 })
-export class DepartmentOverviewComponent implements OnInit {
+export class DepartmentOverviewComponent {
 
-  constructor() { }
-
-  ngOnInit() {
-  }
 
 }

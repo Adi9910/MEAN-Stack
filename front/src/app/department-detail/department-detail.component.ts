@@ -22,12 +22,14 @@ import { ActivatedRoute, Router, ParamMap } from '@angular/router';
   `,
   styles: []
 })
-export class DepartmentDetailComponent implements OnInit {
+export class DepartmentDetailComponent implements OnInit{
 
   public departmentId = 123;
   constructor(private route: ActivatedRoute, private router: Router) { }
 
-  ngOnInit() { }
+  ngOnInit(): void {
+    throw new Error ('methods not implemented')
+  }
 
   goPrevious() {
     let previousId = this.departmentId - 1;
@@ -52,3 +54,4 @@ export class DepartmentDetailComponent implements OnInit {
     this.router.navigate(['contact'], { relativeTo: this.route });
   }
 }
+
