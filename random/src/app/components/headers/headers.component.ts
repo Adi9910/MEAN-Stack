@@ -2,7 +2,10 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-headers',
-  templateUrl: './headers.component.html',
+  template: `<header>
+  <h1>{{ title }} <app-button color="red" text="ADD" (btnClick)="toggleAddTask()"></app-button></h1>
+</header>
+`,
   styleUrls: ['./headers.component.css'],
 })
 export class HeadersComponent implements OnInit {

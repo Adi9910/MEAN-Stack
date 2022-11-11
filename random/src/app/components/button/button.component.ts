@@ -2,7 +2,10 @@ import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-button',
-  templateUrl: './button.component.html',
+  template: `<button class="btn" [ngStyle]="{ 'background-color': color }" (click)="onClick()">
+  {{ text }}
+</button>
+`,
   styleUrls: ['./button.component.css'],
 })
 export class ButtonComponent implements OnInit {

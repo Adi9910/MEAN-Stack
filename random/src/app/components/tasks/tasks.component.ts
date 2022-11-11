@@ -4,7 +4,7 @@ import { TASKS } from '../../mock-tasks';
 
 @Component({
   selector: 'app-tasks',
-  templateUrl: './tasks.component.html',
+  template: `<p *ngFor="let task of tasks">{{ task.text }}</p> `,
   styleUrls: ['./tasks.component.css'],
 })
 export class TasksComponent implements OnInit {
