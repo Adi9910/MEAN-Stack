@@ -5,6 +5,7 @@ import { Component } from '@angular/core';
   template: `<div class="container">MAGIC TABLE
     <app-headers></app-headers>
     <app-tasks></app-tasks>
-  </div>`
+  </div>`,
+  styleUrls: ['./app.component.scss']
 })
 export class AppComponent {}
