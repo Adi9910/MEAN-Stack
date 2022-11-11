@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
 import { item } from './item';
 
 @Component({
@@ -22,6 +23,21 @@ export class AppComponent implements OnInit {
   selectedValue3: string = 'One';
   selectedValue4: string = 'One';
 
+
+  myObs = new Observable((observer)=>{
+    console.log('start');
+    setTimeout(()=>{observer.next("1")},1000)
+    setTimeout(()=>{observer.next("2")},2000)
+    setTimeout(()=>{observer.next("3")},3000)
+    setTimeout(()=>{observer.next("4")},4000)
+    setTimeout(()=>{observer.next("5")},5000)
+  });
+
   constructor() {}
-  ngOnInit(): void {}
+
+  ngOnInit(): void {
+    this.myObs.subscribe((val)=>{
+      console.log(val)
+    })
+  }
 }
