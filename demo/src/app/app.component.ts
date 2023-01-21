@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
-  template: `<div>MAGIC TABLE
+  template: `<div class="main">MAGIC TABLE
     <app-headers></app-headers>
     <app-tasks></app-tasks>
   </div>`,
