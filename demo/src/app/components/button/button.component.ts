@@ -6,7 +6,7 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
   class="btn" 
   [ngStyle]="{ 'background-color': color }" 
   (click)="onClick()">
-  {{ text }}
+  {{ text }}CLick me
 </button>
 `
 })
