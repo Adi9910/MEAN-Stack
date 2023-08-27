@@ -10,8 +10,10 @@ export class AppComponent implements OnInit {
   Hidden = true;
   name: string = '';
   emp: number = 0;
-  posts: any;
+  posts: any = [];
+
   constructor(private service: PostService) {}
+  
   group = [{ name: 'Aditya', emp: 23 }];
   switch() {
     this.Hidden = !this.Hidden;
@@ -21,12 +23,16 @@ export class AppComponent implements OnInit {
       name: this.name,
       emp: this.emp,
     });
-    console.log('grouop', this.group);
+    console.log('group', this.group);
+  }
+  call() {
+    this.service.getPosts().subscribe((res) => {
+      this.posts = res;
+      console.log(res);
+    });
   }
 
   ngOnInit() {
-    this.service.getPosts().subscribe((res) => {
-      this.posts = res;
-    });
+    this.call();
   }
 }

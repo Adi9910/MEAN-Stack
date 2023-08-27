@@ -1,4 +1,9 @@
-<h2>{{Hidden ? "Hello World" : "next table"}}<button (click)="switch()">Diagram</button></h2>
+<div style="display: flex; justify-content: space-between; width: 50%;">
+  <h2>
+    {{ Hidden ? "Hello World " : "next table " }}
+  </h2>
+  <button (click)="switch()">{{ Hidden ? "Hello World" : "next table" }}</button>
+</div>
 
 <div *ngIf="Hidden">
   <input type="text" [(ngModel)]="name" />
@@ -19,8 +24,9 @@
 </div>
 <div *ngIf="!Hidden">
   <ul class="list-group">
-    <li *ngFor="let post of posts" class="list-group-item">
-      {{ post.title }}
-    </li>
+    <div *ngFor="let post of posts" class="list-group-item">
+      {{ post.id }}
+      {{ " - " + post.title }}
+    </div>
   </ul>
 </div>
