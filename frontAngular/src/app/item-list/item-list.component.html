@@ -1,0 +1,16 @@
+<div>
+    <h2>Items</h2>
+    <h2>Add Item</h2>
+    <input type="text" [(ngModel)]="newItemName" placeholder="Item name" />
+    <button (click)="addItem()">Add</button>
+    <h2>Edit Item</h2>
+    <input type="text" [(ngModel)]="editedItemName" placeholder="New item name" />
+    <button (click)="saveEditedItem()">Save</button>
+    
+      <div *ngFor="let item of items">
+        {{item.id}} - {{ item.name }} <button (click)="editItem(item)">Edit</button>
+        <button (click)="deleteItem(item)">Delete</button>
+      </div>
+  </div>
+
+  <!-- json-server --watch db.json -->
